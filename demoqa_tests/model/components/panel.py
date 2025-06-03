@@ -6,7 +6,7 @@ from demoqa_tests.model.pages.profile_page import ProfilePage
 
 class Panel:
     def __init__(self):
-        self.container = browser.element('.left-pannel')
+        self.container = browser.element('.left-panel')
 
     def open(self, item):
         # todo: implement properly the code below (it's just an example for now)

@@ -10,14 +10,14 @@ def test_student_registration_form():
     registration_page.open()
 
     # WHEN
-    registration_page.fill_first_name('Olga').fill_last_name('YA')
-    browser.element('#userEmail').type('name@example.com')
+    registration_page.fill_first_name('Alex').fill_last_name('SN')
+    browser.element('#userEmail').type('sx52ru@example.com')
 
-    browser.all('[name=gender]').element_by(have.value('Female')).element('..').click()
+    browser.all('[name=gender]').element_by(have.value('Male')).element('..').click()
 
-    browser.element('#userNumber').type('1234567891')
+    browser.element('#userNumber').type('0123456789')
 
-    registration_page.fill_date_of_birth('1999', 'May', '11')
+    registration_page.fill_date_of_birth('1984', 'May', '23')
 
     browser.element('#subjectsInput').type('Computer Science').press_enter()
 

@@ -47,9 +47,9 @@ class RegistrationPage:
             have.exact_texts(
                 full_name,
                 email,
-                'Female',
-                '1234567891',
-                '11 May,1999',
+                'Male',
+                '0123456789',
+                '23 May,1984',
                 'Computer Science',
                 'Reading',
                 'foto.jpg',
