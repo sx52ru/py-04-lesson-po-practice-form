@@ -23,7 +23,7 @@ def test_student_registration_form():
 
     browser.all('.custom-checkbox').element_by(have.exact_text('Reading')).click()
 
-    browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
+    browser.element('#uploadPicture').set_value("c:/Users/Syper/PycharmProjects/qa_guru/py-04-lesson-po-practice-form-task-final/tests/resourses/foto.jpg")
 
     browser.element('#currentAddress').type('Moscowskaya Street 18')
 
