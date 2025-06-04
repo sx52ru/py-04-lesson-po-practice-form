@@ -23,7 +23,7 @@ def test_student_registration_form():
 
     browser.all('.custom-checkbox').element_by(have.exact_text('Reading')).click()
 
-    browser.element('#uploadPicture').set_value(resource.path('foto.jpg'))
+    browser.element('#uploadPicture').set_value("c:/Users/Syper/PycharmProjects/qa_guru/py-04-lesson-po-practice-form-task-final/tests/resourses/foto.jpg")
 
     browser.element('#currentAddress').type('Moscowskaya Street 18')
 
@@ -38,11 +38,11 @@ def test_student_registration_form():
 
     # THEN
     registration_page.should_registered_user_with(
-        'Olga YA',
-        'name@example.com',
-        'Female',
-        '1234567891',
-        '11 May,1999',
+        'Alex SN',
+        'sx52ru@example.com',
+        'Male',
+        '0123456789',
+        '23 May,1984',
         'Computer Science',
         'Reading',
         'foto.jpg',
@@ -53,11 +53,11 @@ def test_student_registration_form():
     # example of implementing assertion-free pageobjects
     registration_page.registered_user_data.should(
         have.exact_texts(
-            'Olga YA',
-            'name@example.com',
-            'Female',
-            '1234567891',
-            '11 May,1999',
+            'Alex SN',
+            'sx52ru@example.com',
+            'Maale',
+            '0123456789',
+            '23 May,1984',
             'Computer Science',
             'Reading',
             'foto.jpg',
