@@ -41,20 +41,20 @@ class RegistrationPage:
         ).click()
         return self
 
-    def should_registered_user_with(self, full_name, email, *tbd):
-        # todo: refactor to reuse parameters
+    def should_registered_user_with(self, full_name, email, gender, mobile, date_of_birth, subjects, hobbies, picture_file_name, current_adress, state_city):
+        # todo: refactor to reuse parameters - DONE
         browser.element('.table').all('td').even.should(
             have.exact_texts(
                 full_name,
                 email,
-                'Male',
-                '0123456789',
-                '23 May,1984',
-                'Computer Science',
-                'Reading',
-                'foto.jpg',
-                'Moscowskaya Street 18',
-                'NCR Delhi',
+                gender,
+                mobile,
+                date_of_birth,
+                subjects,
+                hobbies,
+                picture_file_name,
+                current_adress,
+                state_city
             )
         )
         return self
